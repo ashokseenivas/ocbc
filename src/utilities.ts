@@ -69,7 +69,7 @@ const parseResponse = (response: any) => {
         })
     }
 }
-export default {
+const utils = {
     async fetch(url: string) {
         return await fetch(`${API_BASE_URL}${url}`, {
             method: 'GET',
@@ -97,4 +97,5 @@ export default {
         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         return parts.join(".");
     }
-}
+};
+export default utils;
